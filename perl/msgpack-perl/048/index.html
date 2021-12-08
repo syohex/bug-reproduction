@@ -1,0 +1,27 @@
+<html>
+
+<head>
+  <title>MessagePack Testing</title>
+
+  <script src="https://rawgit.com/kawanet/msgpack-lite/master/dist/msgpack.min.js"></script>
+
+  <script>
+
+    const req = new XMLHttpRequest();
+    req.open("GET", "/msg.bin", true);
+    req.responseType = "arraybuffer";
+    req.onload = (event) => {
+      const data = new Uint8Array(req.response);
+      console.log(msgpack.decode(data));
+    };
+    req.send(null);
+
+  </script>
+
+</head>
+
+<body>
+  <h1>Hello MessagePack World</h1>
+</body>
+
+</html>
