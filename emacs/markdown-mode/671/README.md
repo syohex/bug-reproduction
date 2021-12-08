@@ -9,3 +9,8 @@ https://github.com/jrblevin/markdown-mode/issues/671
 > The brackets in link text bind more tightly than markers for emphasis and strong emphasis. Thus, for example, *[foo*](url) is a link.
 
 While [original markdown specification](https://daringfireball.net/projects/markdown/syntax) does not say anything about this. And current markdown implementation does not follow the rule.
+
+[Commonmark](https://spec.commonmark.org/0.30/#emphasis-and-strong-emphasis) also says
+
+> internal emphasis: foo*bar*baz
+> no emphasis: foo_bar_baz
